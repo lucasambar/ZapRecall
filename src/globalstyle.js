@@ -48,6 +48,9 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Recursive', sans-serif;
     }
 
+    *{
+        box-sizing: border-box;
+    }
 `
 
 export default GlobalStyle

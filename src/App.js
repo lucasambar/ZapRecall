@@ -5,8 +5,10 @@ import Logo from './Logo.js'
 import Footer from './Footer.js'
 import Deck from "./Deck.js"
 
-export default function App () {
+
+export default function App () {    
     return (
+        
         <Background>
             <GlobalStyle/>
             <Logo/>

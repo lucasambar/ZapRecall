@@ -16,17 +16,12 @@ const Imagem = styled.div`
     height: 150px;
     width: 375px;
     background-color: #FB6B6B;
-    /* box-shadow: 0px 4px 5px 0px #00000026; */
 
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    /* position: fixed;
-    z-index:2;
-    left: 0;
-    top: 0; */
 
     div{
         height: 60px;
