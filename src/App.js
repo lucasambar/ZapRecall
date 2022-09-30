@@ -8,7 +8,6 @@ import Deck from "./Deck.js"
 
 export default function App () {    
     return (
-        
         <Background>
             <GlobalStyle/>
             <Logo/>

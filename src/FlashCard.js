@@ -3,8 +3,9 @@ import styled from "styled-components"
 export default function FlashCard ({num,questoes,setQuestoes}) {
     function abrirCarta (num) {
         let arr = questoes
-        arr[num-1] = true
+        arr[num-1].B = true
         setQuestoes(arr)
+        console.log(arr[num-1])
     }
 
     return (
