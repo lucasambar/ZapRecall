@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
-export default function FlashCard ({num,questoes,setQuestoes}) {
+export default function FlashCard ({num,questoes,setQuestoes,meta,setMeta}) {
     function abrirCarta (num) {
         let arr = questoes
         arr[num-1].B = true
         setQuestoes(arr)
+        setMeta(meta+1)
         console.log(arr[num-1])
+
     }
 
     return (

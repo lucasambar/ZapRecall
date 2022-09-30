@@ -5,13 +5,14 @@ import FlashCard from "./FlashCard"
 import FlashCardAberto from "./FlashCardAberto"
 import QUESTOES from "./questoes"
 
-export default function Deck () {
+export default function Deck ({meta,setMeta}) {
     const [questoes,setQuestoes] = useState(QUESTOES)
 
     return (
         <Dk>
             {questoes.map ((a) => a.B ? <FlashCardAberto q={a.Q} r={a.R} key={a.num}/>
-            :<FlashCard num={a.num} key={a.num} questoes={questoes} setQuestoes={setQuestoes}/>)}
+            :<FlashCard num={a.num} key={a.num} 
+            questoes={questoes} setQuestoes={setQuestoes} meta={meta} setMeta={setMeta}/>)}
             
         </Dk>
     )

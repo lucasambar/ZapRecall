@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export default function Footer () {
+export default function Footer ({meta}) {
     return (
         <Foot>
             <div>
@@ -8,7 +8,7 @@ export default function Footer () {
                 <Button cor={"#FF922E"}>Quase não lembrei</Button>
                 <Button cor={"#2FBE34"}>Zap!</Button>
             </div>
-            <div className="texto"><span>0/4 CONCLUÍDOS</span></div>
+            <div className="texto"><span>{meta}/4 CONCLUÍDOS</span></div>
         </Foot>
     )
 }
