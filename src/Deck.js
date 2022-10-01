@@ -1,19 +1,16 @@
-import { useState } from "react"
 import styled from "styled-components"
 
 import FlashCard from "./FlashCard"
 import FlashCardAberto from "./FlashCardAberto"
-import QUESTOES from "./questoes"
 
-export default function Deck ({meta,setMeta}) {
-    const [questoes,setQuestoes] = useState(QUESTOES)
+
+export default function Deck ({meta,setMeta,questoes,setQuestoes}) {
 
     return (
         <Dk>
             {questoes.map ((a) => a.B ? <FlashCardAberto q={a.Q} r={a.R} key={a.num}/>
             :<FlashCard num={a.num} key={a.num} 
-            questoes={questoes} setQuestoes={setQuestoes} meta={meta} setMeta={setMeta}/>)}
-            
+            questoes={questoes} setQuestoes={setQuestoes} meta={meta} setMeta={setMeta} cor={a.cor}/>)}
         </Dk>
     )
 }

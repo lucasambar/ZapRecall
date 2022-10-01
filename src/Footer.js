@@ -1,12 +1,24 @@
 import styled from "styled-components"
 
-export default function Footer ({meta}) {
+export default function Footer ({meta,setQuestoes,questoes}) {
+    function atualiza (cor) {
+        let arr = questoes
+        for (let i = 0; i<questoes.length; i++){
+            let a = questoes[i]
+            if (a.B) {
+                a.B = false
+                a.cor = cor
+            }
+        }
+        setQuestoes(arr)  
+    }
+
     return (
         <Foot>
             <div>
-                <Button cor={"#FF3030"}>Não lembrei</Button>
-                <Button cor={"#FF922E"}>Quase não lembrei</Button>
-                <Button cor={"#2FBE34"}>Zap!</Button>
+                <Button cor={"#FF3030"} onClick={()=>atualiza("#FF3030")}>Não lembrei</Button>
+                <Button cor={"#FF922E"} onClick={()=>atualiza("#FF922E")}>Quase não lembrei</Button>
+                <Button cor={"#2FBE34"} onClick={()=>atualiza("#2FBE34")}>Zap!</Button>
             </div>
             <div className="texto"><span>{meta}/4 CONCLUÍDOS</span></div>
         </Foot>
@@ -21,6 +33,10 @@ let Foot = styled.div`
 
     padding-top: 10px;
 
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
 
     div {
         height: 37px;
@@ -56,6 +72,7 @@ let Button = styled.button`
         border-radius: 5px;
         border: none;
         background-color: ${props => props.cor};
+        cursor:pointer;
 
         font-family: Recursive;
         font-size: 12px;
