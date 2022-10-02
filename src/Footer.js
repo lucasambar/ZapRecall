@@ -10,6 +10,7 @@ export default function Footer ({meta,setQuestoes,questoes}) {
                 a.cor = cor
             }
         }
+        console.log(arr)
         setQuestoes(arr)  
     }
 
@@ -20,7 +21,7 @@ export default function Footer ({meta,setQuestoes,questoes}) {
                 <Button cor={"#FF922E"} onClick={()=>atualiza("#FF922E")}>Quase não lembrei</Button>
                 <Button cor={"#2FBE34"} onClick={()=>atualiza("#2FBE34")}>Zap!</Button>
             </div>
-            <div className="texto"><span>{meta}/4 CONCLUÍDOS</span></div>
+            <div className="texto"><span>{meta}/8 CONCLUÍDOS</span></div>
         </Foot>
     )
 }

@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import Icone from "./Icone"
+
 export default function FlashCard ({num,questoes,setQuestoes,meta,setMeta,cor}) {
     function abrirCarta (num) {
         let arr = questoes
@@ -9,10 +11,10 @@ export default function FlashCard ({num,questoes,setQuestoes,meta,setMeta,cor}) 
     }
 
     return (
-    <FC cor={cor}>
-        <p>Pergunta {num}</p>
-        <ion-icon name="play-outline" onClick={()=>abrirCarta(num)}></ion-icon>
-    </FC>
+        <FC cor={cor} onClick={() => abrirCarta(num)}>
+            <p>Pergunta {num}</p>
+            <Icone cor={cor}/>
+        </FC>
     )
 }
 
@@ -35,7 +37,8 @@ const FC = styled.div`
         line-height: 19px;
         letter-spacing: 0em;
         text-align: left;
-        color: ${props=>props.cor}
+        color: ${props=>props.cor},
+        text-decoration ${props => props.cor !== "#333333" ? "line-through" : "none" },
     }
 
     ion-icon{

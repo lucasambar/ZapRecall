@@ -12,7 +12,6 @@ export default function App () {
     const [meta,setMeta] = useState(0)
     const [questoes,setQuestoes] = useState(QUESTOES)
 
-
     return (
         <Background>
             <GlobalStyle/>
