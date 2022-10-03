@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import logo from "./img/logo.png"
 
-export default function TelaInicial (entrada, setEntrada) {
+export default function TelaInicial ({entrada, setEntrada}) {
   
     function mudarPagina () {
         console.log(setEntrada)

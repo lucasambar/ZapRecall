@@ -3,7 +3,8 @@ import icone_erro from "./img/icone_erro.png"
 import icone_quase from "./img/icone_quase.png"
 import seta_play from './img/seta_play.png'
 
-export default function Icone (cor) {
+export default function Icone ({cor}) {
+    console.log(cor)
     if (cor === "#FF3030") {
         return <img src={icone_erro} alt="" data-identifier="flashcard-show-btn flashcard-status"/>
     }

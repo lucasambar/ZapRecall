@@ -10,8 +10,8 @@ export default function Footer ({meta,setQuestoes,questoes}) {
                 a.cor = cor
             }
         }
+        setQuestoes([...arr])  
         console.log(arr)
-        setQuestoes(arr)  
     }
 
     return (
