@@ -11,7 +11,6 @@ export default function Footer ({meta,setQuestoes,questoes}) {
             }
         }
         setQuestoes([...arr])  
-        console.log(arr)
     }
 
     return (

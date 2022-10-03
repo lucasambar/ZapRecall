@@ -5,7 +5,6 @@ import logo from "./img/logo.png"
 export default function TelaInicial ({entrada, setEntrada}) {
   
     function mudarPagina () {
-        console.log(setEntrada)
         entrada = false
         setEntrada(entrada)
     

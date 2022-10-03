@@ -9,7 +9,6 @@ export default function FlashCard ({num,questoes,setQuestoes,meta,setMeta,cor}) 
         setQuestoes(arr)
         setMeta(meta+1)
     }
-    console.log(cor)
     return (
         <FC onClick={() => abrirCarta(num)} >
             <Texto data-identifier="flashcard" cor={cor}>Pergunta {num}</Texto>
