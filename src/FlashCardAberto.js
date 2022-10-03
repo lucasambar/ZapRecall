@@ -13,9 +13,9 @@ export default function FlashCardAberto ({q,r}) {
     }
 
     return (
-        <FCA onClick={resposta}>
-            <Texto> <p>{texto}</p> </Texto>
-            <Imagem imagem={imagem}> <img src={girar} alt="icone virar"/> </Imagem>
+        <FCA  data-identifier="flashcard-index-item">
+            <Texto> <p data-identifier="flashcard-answer flashcard-question">{texto}</p> </Texto>
+            <Imagem imagem={imagem} onClick={resposta}> <img src={girar} alt="icone virar" data-identifier="flashcard-turn-btn"/> </Imagem>
         </FCA>
     )
 }

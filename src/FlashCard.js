@@ -11,9 +11,9 @@ export default function FlashCard ({num,questoes,setQuestoes,meta,setMeta,cor}) 
     }
 
     return (
-        <FC cor={cor} onClick={() => abrirCarta(num)}>
-            <p>Pergunta {num}</p>
-            <Icone cor={cor}/>
+        <FC cor={cor} >
+            <p data-identifier="flashcard">Pergunta {num}</p>
+            <Icone cor={cor} onClick={() => abrirCarta(num)} />
         </FC>
     )
 }

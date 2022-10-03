@@ -17,11 +17,11 @@ export default function Footer ({meta,setQuestoes,questoes}) {
     return (
         <Foot>
             <div>
-                <Button cor={"#FF3030"} onClick={()=>atualiza("#FF3030")}>Não lembrei</Button>
-                <Button cor={"#FF922E"} onClick={()=>atualiza("#FF922E")}>Quase não lembrei</Button>
-                <Button cor={"#2FBE34"} onClick={()=>atualiza("#2FBE34")}>Zap!</Button>
+                <Button cor={"#FF3030"} onClick={()=>atualiza("#FF3030")} data-identifier="forgot-btn">Não lembrei</Button>
+                <Button cor={"#FF922E"} onClick={()=>atualiza("#FF922E")} data-identifier="almost-forgot-btn">Quase não lembrei</Button>
+                <Button cor={"#2FBE34"} onClick={()=>atualiza("#2FBE34")} data-identifier="zap-btn">Zap!</Button>
             </div>
-            <div className="texto"><span>{meta}/8 CONCLUÍDOS</span></div>
+            <div className="texto" data-identifier="flashcard-counter"><span>{meta}/8 CONCLUÍDOS</span></div>
         </Foot>
     )
 }

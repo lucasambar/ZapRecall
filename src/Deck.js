@@ -9,8 +9,7 @@ export default function Deck ({meta,setMeta,questoes,setQuestoes}) {
     return (
         <Dk>
             {questoes.map ((a) => a.B ? <FlashCardAberto q={a.Q} r={a.R} key={a.num}/>
-            :<FlashCard num={a.num} key={a.num} 
-            questoes={questoes} setQuestoes={setQuestoes} meta={meta} setMeta={setMeta} cor={a.cor}/>)}
+            :<FlashCard num={a.num} key={a.num} cor={a.cor} questoes={questoes} setQuestoes={setQuestoes} meta={meta} setMeta={setMeta} />)}
         </Dk>
     )
 }
@@ -25,7 +24,3 @@ const Dk = styled.div`
 
     margin-bottom: 20px;
 `
-
-
-/* <FlashCardAberto q={"Natasha bonassera?"} r={"Bonassera Catuxa"}/>
-            {questoes.map ((a) => <FlashCard num={a.num} key={a.num} questoes={questoes} setQuestoes={setQuestoes}/>)}*/

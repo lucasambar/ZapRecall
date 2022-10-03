@@ -5,15 +5,15 @@ import seta_play from './img/seta_play.png'
 
 export default function Icone (cor) {
     if (cor === "#FF3030") {
-        return <img src={icone_erro} alt=""/>
+        return <img src={icone_erro} alt="" data-identifier="flashcard-show-btn flashcard-status"/>
     }
     else if (cor === "#FF922E") {
-        return <img src={icone_quase} alt=""/>
+        return <img src={icone_quase} alt="" data-identifier="flashcard-show-btn flashcard-status"/>
     }
     else if (cor === "#2FBE34") {
-        return <img src={icone_certo} alt=""/>
+        return <img src={icone_certo} alt="" data-identifier="flashcard-show-btn flashcard-status"/>
     }
     else {
-        return <img src={seta_play} alt=""/>
+        return <img src={seta_play} alt="" data-identifier="flashcard-show-btn flashcard-status"/>
     }
 }
